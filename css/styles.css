@@ -153,9 +153,7 @@ a {
 @media screen and (min-width: 1024px) {
     .list__tick .list__item {  
         padding-left: 0;
-
     }
-    
 }
 
 /* Icons */
@@ -168,6 +166,15 @@ a {
     fill: var(--color-primary);
 }
 
+.icon--white {
+    fill: #fff;
+}
+
+.icon--small {
+    width: 30px;
+    height: 30px;
+}
+
 .icon-container {  /* 这里为什么是单dash，因为不是icon class的一个variation，一个modifier，而是完全不同的新class。In BEM, we use single hyphen to separate multiple words */
     background: #f3f9fa;
     width: 64px;
@@ -176,6 +183,10 @@ a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+
+.icon-container--accent {
+    background: var(--color-accent);
 }
 
 /* Buttons */
@@ -442,4 +453,39 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
     
+}
+
+/* Testimonials */
+.testimonial {
+    padding: 3rem;
+}
+
+.testimonial__image {
+    position: relative;
+}
+
+.testimonial__image > img {
+    width: 100%;
+}
+
+.testimonial__image > .icon-container {
+    position: absolute;
+    top: 3rem;
+    right: -30px;
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial .quote, .testimonial .quote__author{
+        font-size: 2.4rem;
+    }
+    
+    .testimonial .quote {
+        margin-left: 6rem;
+    }
+
+    .testimonial__image > .icon-container {
+        position: absolute;
+        top: 3rem;
+        right: -32px;
+    }
 }
