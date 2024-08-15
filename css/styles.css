@@ -24,9 +24,13 @@ html {
     font-size: 62.5%;
 }
 
+img {
+    width:100%;
+}
+
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 2.4rem;
+    font-size: 2rem;
     line-height: 1.5; /*1.5times of current font-size*/
     color:  var(--color-body);
 }
@@ -206,7 +210,7 @@ a {
     font-weight: 600;
     margin: 1rem 0;
     outline: 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -297,6 +301,7 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn {
@@ -610,7 +615,7 @@ a {
 
 /* Blocks */
 .block {
-    --padding-vertical: 6rem;
+    --padding-vertical: 5rem;
     padding: var(--padding-vertical) 2rem;
 }
 
@@ -636,12 +641,12 @@ a {
 
 .block--skewed-right {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 90%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 95%);
 }
 
 .block--skewed-left {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0 100%);
 }
 
 .container {
@@ -655,7 +660,7 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 1rem;
+    padding: 1rem;
     align-items: center;
 }
 
@@ -693,6 +698,7 @@ a {
 
 .nav__brand {
     transform: translateY(5px);
+    width: 150px;
 }
 
 @media screen and (min-width: 768px) {
@@ -721,18 +727,16 @@ a {
     margin: 2rem 0 5rem;
 }
 
-.hero__image {
-    width: 100%;
-}
-
 @media screen and (min-width: 768px) {
-    .hero {
-        padding-top: 0;
-    }
-
     .hero__content {
         text-align: left;
         align-self: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        padding-top: 0;
     }
 }
 
@@ -746,14 +750,21 @@ a {
 }
 
 .block-domain__prices {
+    color: var(--color-headings);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
     justify-items: center;
     max-width: 700px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 400px) {
+    .block-domain__prices {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -819,6 +830,7 @@ a {
 /* Footer */
 .footer {
     background-color: #232323;
+    padding-top: 10rem;
 }  
 
 .footer a {
@@ -837,11 +849,14 @@ a {
 
 .footer__section .list {
     margin: 0;
+    line-height: 2;
 }
 
 .footer__heading {
     text-transform: uppercase;
     font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.5;
 }
 
 .footer__brand {
@@ -895,4 +910,9 @@ a {
     .footer__heading {
         font-size: 1.6rem;
     }
+}
+
+/* Sign-up Callout */
+.callout-signup {
+    transform: translateY(5rem);
 }
