@@ -779,6 +779,18 @@ a {
   }
 }
 
+@media screen and (min-width: 1140px) and (max-width: 1180px) {
+  .hero .container {
+    padding-left: calc((100vw - 1140px) / 2);
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .hero .container {
+    padding-left: 2rem;
+  }
+}
+
 /* Domain Block */
 .block-domain .input-group {
   box-shadow: 0 0 30px 20px #e6ebee;
