@@ -1,0 +1,10 @@
+# Node.js dependencies
+node_modules/
+
+# Ignore the .cache directory used for storing temporary files and build cache.
+# This directory is generated automatically by build tools (like Parcel, Gatsby, etc.)
+# and does not need to be version controlled.
+.cache/
+
+# Build output
+dist/
