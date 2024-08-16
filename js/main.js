@@ -17,3 +17,16 @@ collapsibles.forEach((item) =>
     //classList 是一个包含元素所有类名的 DOMTokenList 对象，toggle 方法用于在类列表中切换指定的类。
   })
 );
+
+// Navigation Shrink
+// 使用 JavaScript 来监听页面滚动事件，并在用户向下滚动时给导航栏添加一个类，以实现缩小效果。
+window.addEventListener("scroll", function () {
+  var navigation = document.querySelector(".navigation");
+
+  if (window.scrollY > 80) {
+    //window.scrollY 返回页面在垂直方向上滚动的像素值。当用户滚动页面时，这个值会增大。如果用户回到页面顶部，这个值会变为 0。
+    navigation.classList.add("nav--shrink");
+  } else {
+    navigation.classList.remove("nav--shrink");
+  }
+});

@@ -693,6 +693,31 @@ a {
 }
 
 /* Navigation Bar */
+.navigation {
+  height: 110px; /* 缩小后的高度 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* 或者你需要的颜色 */
+  z-index: 1000; /* 确保导航栏在其他内容之上 */
+  transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+.nav__brand img {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.nav--shrink {
+  height: 60px; /* 缩小后的高度 */
+  background-color: #000; /* 你可以根据需要改变背景色 */
+}
+
+.nav--shrink .nav__brand img {
+  width: 120px; /* 缩小后的 logo 宽度 */
+  height: auto; /* 保持比例 */
+}
+
 .nav {
   background-color: #000;
   display: flex;
@@ -737,7 +762,7 @@ a {
 
 .nav__brand {
   transform: translateY(5px);
-  width: 150px;
+  width: 200px;
 }
 
 @media screen and (min-width: 768px) {
@@ -759,6 +784,11 @@ a {
 }
 
 /* Hero */
+.hero {
+  --hero-padding-top: 10rem;
+  padding-top: var(--hero-padding-top);
+}
+
 .hero__tagline {
   font-size: 2rem;
   color: #b9c3cf;
@@ -775,7 +805,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .hero {
-    padding-top: 0;
+    padding-top: calc(--hero-padding-top - 6rem);
   }
 }
 
