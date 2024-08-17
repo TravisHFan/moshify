@@ -415,13 +415,13 @@ a {
   transform: scale(1.05);
 }
 
-.plan--popular:hover {
-  transform: scale(1.15);
-}
-
 @media screen and (min-width: 768px) {
   .plan--popular {
     transform: scale(1.1);
+  }
+
+  .plan--popular:hover {
+    transform: scale(1.15);
   }
 }
 
@@ -694,7 +694,7 @@ a {
 
 /* Navigation Bar */
 .navigation {
-  height: 110px; /* 缩小后的高度 */
+  height: 80px; /* 缩小前的高度 */
   position: fixed;
   top: 0;
   left: 0;
@@ -714,7 +714,7 @@ a {
 }
 
 .nav--shrink .nav__brand img {
-  width: 120px; /* 缩小后的 logo 宽度 */
+  width: 110px; /* 缩小后的 logo 宽度 */
   height: auto; /* 保持比例 */
 }
 
@@ -738,7 +738,7 @@ a {
 }
 
 .nav__item > a {
-  color: #d2d0db;
+  color: #b4b2c0;
   transition: color 0.3s;
 }
 
@@ -762,10 +762,19 @@ a {
 
 .nav__brand {
   transform: translateY(5px);
-  width: 200px;
+  width: 160px;
 }
 
 @media screen and (min-width: 768px) {
+  .nav__brand {
+    width: 200px;
+  }
+
+  .nav--shrink .nav__brand img {
+    width: 128px; /* 缩小后的 logo 宽度 */
+    height: auto; /* 保持比例 */
+  }
+
   .nav__toggler {
     display: none;
   }
@@ -785,7 +794,7 @@ a {
 
 /* Hero */
 .hero {
-  --hero-padding-top: 10rem;
+  --hero-padding-top: 13rem;
   padding-top: var(--hero-padding-top);
 }
 
@@ -797,6 +806,10 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .hero {
+    padding-top: calc(var(--hero-padding-top) - 2rem);
+  }
+
   .hero__content {
     text-align: left;
     align-self: center;

@@ -23,7 +23,7 @@ collapsibles.forEach((item) =>
 window.addEventListener("scroll", function () {
   var navigation = document.querySelector(".navigation");
 
-  if (window.scrollY > 80) {
+  if (window.scrollY > 50) {
     //window.scrollY 返回页面在垂直方向上滚动的像素值。当用户滚动页面时，这个值会增大。如果用户回到页面顶部，这个值会变为 0。
     navigation.classList.add("nav--shrink");
   } else {
